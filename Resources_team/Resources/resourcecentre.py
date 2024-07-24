@@ -47,6 +47,7 @@ class ResourceCenter:
         # Display menu and obtain menu choices
         choice = self.display_menu()
 
+
         while choice != CHOICE_QUIT:
 
             if choice == CHOICE_ADD:
@@ -56,6 +57,7 @@ class ResourceCenter:
                 # Refactor (B): Extract duplicate codes to selectItemType(),
                 # return the option selected.
                 # Advance refactoring: error chekcing in selectItemType().
+
                 option = self.selectItemType
 
                 # TO-DO: Write the code to ADD a camcorder or chrome book.
@@ -97,6 +99,7 @@ class ResourceCenter:
                 option = int(input("Enter option to select item type >"))
 
                 # TO-DO: Write the code to LOAN a camcorder or chrome book
+
                 
             elif choice == CHOICE_RETURN:
                 # Refactor (B): use printHeader(mesage)

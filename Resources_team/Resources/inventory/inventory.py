@@ -83,7 +83,6 @@ class Inventory():
         output = ""
         output += "{:<10}{:<30}{:<10}{:<12}{:<10}\n".format("AssetTag", 
                     "Description", "Available", "Due Date", "OS")
-
         if len(self.laptopList) == 0:
             output += "There is no laptop to display."
         else:
