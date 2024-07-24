@@ -12,7 +12,7 @@ class Inventory():
             currentTag = c.getAssetTag()
             if currentTag == assetTag:
                 foundAsset = c
-                
+
         for c in self.laptopList:
             currentTag = c.getAssetTag()
             if currentTag == assetTag:
@@ -115,28 +115,20 @@ class Inventory():
     def loanLaptop(self, assetTag, dueDate):
         return self.loanAsset(assetTag, dueDate)
     
-    def returnCamera(self, assetTag):
+    def returnAsset(self,assetTag):
         success = False
         if len(assetTag) > 0:
             # Refactor (C): use findcamera()
-            for i in self.cameraList:
-                if i.getAssetTag() == assetTag:
-                    if i.getIsAvailable() == "No":
-                        i.setIsAvailable(True)
-                        i.setDueDate("")
-                        success = True
-        
+            foundAsset = self.findAsset(assetTag)
+            if foundAsset != None:
+                if foundAsset.getIsAvailable() == "No":
+                    foundAsset.setIsAvailable(True)
+                    foundAsset.setDueDate("")
+                    success = True
         return success
+
+    def returnCamera(self, assetTag):
+        return self.returnAsset(assetTag)
     
     def returnLaptop(self, assetTag):
-        success = False
-        if len(assetTag) > 0:
-            # Refactor (C): use findcamera()
-            for i in self.laptopList:
-                if i.getAssetTag() == assetTag:
-                    if i.getIsAvailable() == "No":
-                        i.setIsAvailable(True)
-                        i.setDueDate("")
-                        success = True
-        
-        return success
+        return self.returnAsset(assetTag)
