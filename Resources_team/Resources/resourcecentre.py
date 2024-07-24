@@ -1,5 +1,4 @@
 from inventory.inventory import Inventory
-
 class ResourceCenter:
     def __init__(self):
         ## Prepare the data (Inventory list)

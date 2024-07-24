@@ -29,10 +29,12 @@ class Inventory():
         # return the found camera, return None if not found. 
         # **Don't forget to create test cases for this new method. 
         # Check for existing camera 
+
         if self.findAsset(assetTag) != None:
                 error_message = "Asset already exists."
 
         if correct and self.findAsset(assetTag) == None:
+
             new_camera = Camera(assetTag, description, opticalzoom) 
             self.cameraList.append(new_camera) 
             return True
@@ -51,10 +53,12 @@ class Inventory():
         # return the found laptop, return None if not found. 
         # **Don't forget to create test cases for this new method. 
         # Check for existing laptop 
+
         if self.findAsset(assetTag) != None:
                 error_message = "Asset already exists."
 
         if correct and self.findAsset(assetTag) == None:
+
             new_laptop = Laptop(assetTag, description, os) 
             self.laptopList.append(new_laptop) 
             return True 
@@ -78,7 +82,6 @@ class Inventory():
                         i.getOpticalZoom() )
             
         return output
-
     def getAvailableLaptop(self):
         output = ""
         output += "{:<10}{:<30}{:<10}{:<12}{:<10}\n".format("AssetTag", 

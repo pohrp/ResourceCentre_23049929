@@ -32,3 +32,4 @@ class Camera():
                 self.getAssetTag(), self.getDescription(),  
                 self.getIsAvailable(), self.getDueDate(), 
                 self.getOpticalZoom() )
+
