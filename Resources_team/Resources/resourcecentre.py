@@ -1,8 +1,9 @@
 from inventory.inventory import Inventory
+
 class ResourceCenter:
     def __init__(self):
         ## Prepare the data (Inventory list)
-        self.inventory = Inventory()
+        self.inventory = Inventory() 
 
     def display_menu(self):
         choice = -1
@@ -19,17 +20,12 @@ class ResourceCenter:
                 print("Invalid choice, please enter again.\n")
         return choice
 
-    def printHeader(self,message):
-        # Refactor (B): use printHeader(mesage)
-                print("")
-                print("==============================================")
-                print(message)
-                print("==============================================")
+    def print_header(self, message):
+        print("\n==============================================")
+        print(message)
+        print("==============================================")
 
-    def selectItemType(self):
-        # Refactor (B): Extract duplicate codes to selectItemType(),
-        # return the option selected.
-        # Advance refactoring: error chekcing in selectItemType().
+    def select_item_type(self):
         print("\nItem types:")
         print("1. Digital Camera")
         print("2. Laptop")
@@ -46,6 +42,7 @@ class ResourceCenter:
         # Refactor (A): Extract constants for option integers
         OPTION_CAMERA = 1
         OPTION_LAPTOP = 2
+
         #### Menu driven application ####
         # Display menu and obtain menu choices
         choice = self.display_menu()
