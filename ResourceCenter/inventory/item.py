@@ -30,3 +30,4 @@ class Item():
         return '{:<10}{:<30}{:<10}{:<12}'.format(
             self.getAssetTag(), self.getDescription(),
             self.getIsAvailable(), self.getDueDate())
+#test
