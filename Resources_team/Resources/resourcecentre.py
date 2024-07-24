@@ -61,18 +61,16 @@ class ResourceCenter:
 
                 # TO-DO: Write the code to ADD a camcorder or chrome book.
                 if option == OPTION_CAMERA:
+                    print(self.inventory.getNotAvailableCamera())
                     assetTag = input("Enter asset tag >")
-                    description = input("Enter descrition >")
-                    opticalzoom = int(input("Enter optical zoom >"))
                     result = self.inventory.addCamera(assetTag, description, opticalzoom)
                     if result:
                         print("Digital camera added.")
                     else:
                         print("Error adding digital camera.")
                 elif option == OPTION_LAPTOP:
+                    print(self.inventory.getNotAvailableLaptop())
                     assetTag = input("Enter asset tag >")
-                    description = input("Enter descrition >")
-                    os = input("Enter os >")
                     result = self.inventory.addLaptop(assetTag, description, os)
                     if result:
                         print("Laptop added.")
