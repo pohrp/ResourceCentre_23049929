@@ -63,7 +63,7 @@ class ResourceCenter:
                 if option == OPTION_CAMERA:
                     print(self.inventory.getNotAvailableCamera())
                     assetTag = input("Enter asset tag >")
-                    result = self.inventory.addCamera(assetTag, description, opticalzoom)
+                    result = self.inventory.addCamera(assetTag)
                     if result:
                         print("Digital camera added.")
                     else:
@@ -71,7 +71,7 @@ class ResourceCenter:
                 elif option == OPTION_LAPTOP:
                     print(self.inventory.getNotAvailableLaptop())
                     assetTag = input("Enter asset tag >")
-                    result = self.inventory.addLaptop(assetTag, description, os)
+                    result = self.inventory.addLaptop(assetTag)
                     if result:
                         print("Laptop added.")
                     else:
