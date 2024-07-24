@@ -3,13 +3,13 @@ from inventory.inventory import Inventory
 class ResourceCenter:
     def __init__(self):
         ## Prepare the data (Inventory list)
-        self.inventory = Inventory() 
+        self.inventory = Inventory()
 
     def display_menu(self):
         choice = -1
         while not 1 <= choice <= 5:
             print("\n==============================================")
-            print('RESOURCE CENTRE SYSTEM: By Poh Farn')
+            print('RESOURCE CENTRE SYSTEM:')
             print("1. Add item")
             print("2. Display Inventory")
             print("3. Loan item")
@@ -106,7 +106,6 @@ class ResourceCenter:
                 option = self.selectItemType
 
                 # TO-DO: Write the code to RETURN a camcorder or chrome book
-
             else:
                 print("Invalid choice.")
             
